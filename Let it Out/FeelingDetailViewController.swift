@@ -10,12 +10,14 @@ import UIKit
 
 class FeelingDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
     var mood : Mood?
     var resuseIdentifier = "emotionCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.rowHeight = 100.0
         // Do any additional setup after loading the view.
     }
 
@@ -34,9 +36,13 @@ class FeelingDetailViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(resuseIdentifier, forIndexPath: indexPath)
-        cell.textLabel!.text = mood?.emotionAt(indexPath.row).name
-        // Configure the cell...
-        
+            
+        if let cell = cell as? EmotionTableViewCell,
+        emotion = mood?.emotionAt(indexPath.row) {
+            cell.nameLabel?.text = emotion.name
+            cell.emojiLabel?.text = emotion.emoji
+            return cell
+        }
         return cell
     }
 
