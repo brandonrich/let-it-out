@@ -7,16 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
 class HowAreYouFeelingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    
     var spectrum = EmotionalSpectrum()
     let reuseIdentifier = "moodCell"
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
+        // Write data to Firebase
+        MyFirebase.sharedInstance.rootRef.setValue("Do you have data? You'll love Firebase2. :-)")
+        
+        // Read data and react to changes
+        MyFirebase.sharedInstance.rootRef.observeEventType(.Value, withBlock: {
+            snapshot in
+            print("\(snapshot.key) -> \(snapshot.value)")
+        })
+        
+        User.createRemote("brich@nd.edu", password: "foo")
+        
         // Do any additional setup after loading the view.
     }
 
