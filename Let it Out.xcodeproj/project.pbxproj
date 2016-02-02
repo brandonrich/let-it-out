@@ -17,9 +17,12 @@
 		72D4D7751C5F053A00FD9BAF /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7741C5F053A00FD9BAF /* Mood.swift */; };
 		72D4D7771C5F0A8100FD9BAF /* EmotionalSpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7761C5F0A8100FD9BAF /* EmotionalSpectrum.swift */; };
 		72D4D7791C5F137500FD9BAF /* EmotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7781C5F137500FD9BAF /* EmotionTableViewCell.swift */; };
+		E36415DC7A5DD50EEC1C4A38 /* Pods_Let_it_Out.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD69DC6A992C8A4E505EC09 /* Pods_Let_it_Out.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07E2F4AB65BA144CB361F1B8 /* Pods-Let it Out.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let it Out.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Let it Out/Pods-Let it Out.debug.xcconfig"; sourceTree = "<group>"; };
+		5245C62E8DD215E8BA179CED /* Pods-Let it Out.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let it Out.release.xcconfig"; path = "Pods/Target Support Files/Pods-Let it Out/Pods-Let it Out.release.xcconfig"; sourceTree = "<group>"; };
 		72D4D7551C5EF69900FD9BAF /* Let it Out.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let it Out.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D4D7581C5EF69900FD9BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72D4D75D1C5EF69900FD9BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		72D4D7741C5F053A00FD9BAF /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		72D4D7761C5F0A8100FD9BAF /* EmotionalSpectrum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionalSpectrum.swift; sourceTree = "<group>"; };
 		72D4D7781C5F137500FD9BAF /* EmotionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionTableViewCell.swift; sourceTree = "<group>"; };
+		DDD69DC6A992C8A4E505EC09 /* Pods_Let_it_Out.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_it_Out.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E36415DC7A5DD50EEC1C4A38 /* Pods_Let_it_Out.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47121AB3353B84B98522AACE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07E2F4AB65BA144CB361F1B8 /* Pods-Let it Out.debug.xcconfig */,
+				5245C62E8DD215E8BA179CED /* Pods-Let it Out.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		72D4D74C1C5EF69900FD9BAF = {
 			isa = PBXGroup;
 			children = (
 				72D4D7571C5EF69900FD9BAF /* Let it Out */,
 				72D4D7561C5EF69900FD9BAF /* Products */,
+				47121AB3353B84B98522AACE /* Pods */,
+				F9FFA6DE9D315A0B7CAE7288 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +127,14 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		F9FFA6DE9D315A0B7CAE7288 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDD69DC6A992C8A4E505EC09 /* Pods_Let_it_Out.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72D4D7671C5EF69900FD9BAF /* Build configuration list for PBXNativeTarget "Let it Out" */;
 			buildPhases = (
+				F76DE1F7E61213FEF4EB16C8 /* Check Pods Manifest.lock */,
 				72D4D7511C5EF69900FD9BAF /* Sources */,
 				72D4D7521C5EF69900FD9BAF /* Frameworks */,
 				72D4D7531C5EF69900FD9BAF /* Resources */,
+				D1525ED4C68B0E8C2AE9082E /* Embed Pods Frameworks */,
+				4983501E016669732E4B940B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,6 +204,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4983501E016669732E4B940B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Let it Out/Pods-Let it Out-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1525ED4C68B0E8C2AE9082E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Let it Out/Pods-Let it Out-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F76DE1F7E61213FEF4EB16C8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72D4D7511C5EF69900FD9BAF /* Sources */ = {
@@ -300,6 +375,7 @@
 		};
 		72D4D7681C5EF69900FD9BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07E2F4AB65BA144CB361F1B8 /* Pods-Let it Out.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Let it Out/Info.plist";
@@ -311,6 +387,7 @@
 		};
 		72D4D7691C5EF69900FD9BAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5245C62E8DD215E8BA179CED /* Pods-Let it Out.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Let it Out/Info.plist";
@@ -339,6 +416,7 @@
 				72D4D7691C5EF69900FD9BAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
