@@ -19,6 +19,8 @@
 		72D4D7791C5F137500FD9BAF /* EmotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7781C5F137500FD9BAF /* EmotionTableViewCell.swift */; };
 		72D4D78A1C60570D00FD9BAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7891C60570D00FD9BAF /* User.swift */; };
 		72D4D78C1C60576700FD9BAF /* MyFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D78B1C60576700FD9BAF /* MyFirebase.swift */; };
+		72D68B2F1C62F7E9003AAA5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D68B2E1C62F7E9003AAA5D /* LoginViewController.swift */; };
+		72D68B331C62FFD8003AAA5D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D68B321C62FFD8003AAA5D /* RegisterViewController.swift */; };
 		E36415DC7A5DD50EEC1C4A38 /* Pods_Let_it_Out.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD69DC6A992C8A4E505EC09 /* Pods_Let_it_Out.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		72D4D7781C5F137500FD9BAF /* EmotionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionTableViewCell.swift; sourceTree = "<group>"; };
 		72D4D7891C60570D00FD9BAF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72D4D78B1C60576700FD9BAF /* MyFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFirebase.swift; sourceTree = "<group>"; };
+		72D68B2E1C62F7E9003AAA5D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		72D68B321C62FFD8003AAA5D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DDD69DC6A992C8A4E505EC09 /* Pods_Let_it_Out.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_it_Out.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,8 @@
 		72D4D76C1C5EFC3E00FD9BAF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				72D68B321C62FFD8003AAA5D /* RegisterViewController.swift */,
+				72D68B2E1C62F7E9003AAA5D /* LoginViewController.swift */,
 				72D4D76F1C5F043900FD9BAF /* FeelingDetailViewController.swift */,
 				72D4D76D1C5F008900FD9BAF /* HowAreYouFeelingViewController.swift */,
 			);
@@ -273,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D4D7701C5F043900FD9BAF /* FeelingDetailViewController.swift in Sources */,
+				72D68B331C62FFD8003AAA5D /* RegisterViewController.swift in Sources */,
 				72D4D7771C5F0A8100FD9BAF /* EmotionalSpectrum.swift in Sources */,
 				72D4D7721C5F048600FD9BAF /* Emotion.swift in Sources */,
 				72D4D7791C5F137500FD9BAF /* EmotionTableViewCell.swift in Sources */,
@@ -280,6 +287,7 @@
 				72D4D7591C5EF69900FD9BAF /* AppDelegate.swift in Sources */,
 				72D4D78C1C60576700FD9BAF /* MyFirebase.swift in Sources */,
 				72D4D76E1C5F008900FD9BAF /* HowAreYouFeelingViewController.swift in Sources */,
+				72D68B2F1C62F7E9003AAA5D /* LoginViewController.swift in Sources */,
 				72D4D7751C5F053A00FD9BAF /* Mood.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
