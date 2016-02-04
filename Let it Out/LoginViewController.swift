@@ -24,7 +24,8 @@ class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        return true
+        authenticate()
+        return false
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -40,8 +41,10 @@ class LoginViewController: UIViewController {
             error, authData in
             if error != nil {
                 // an error occured while attempting login
+                print("problem logging in")
             } else {
                 // user is logged in, check authData for data
+                self.performSegueWithIdentifier("loginSuccessSegue", sender: nil)
             }
         }
     }

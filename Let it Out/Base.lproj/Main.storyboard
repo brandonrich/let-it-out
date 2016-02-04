@@ -207,7 +207,7 @@
                                 <rect key="frame" x="350.5" y="291" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <segue destination="InF-3w-3Sv" kind="show" id="v3N-df-SRM"/>
+                                    <segue destination="InF-3w-3Sv" kind="show" identifier="loginSuccessSegue" id="v3N-df-SRM"/>
                                 </connections>
                             </button>
                         </subviews>
