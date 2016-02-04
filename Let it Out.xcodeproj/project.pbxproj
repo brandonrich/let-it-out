@@ -104,9 +104,7 @@
 		72D4D7731C5F052C00FD9BAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				72D4D7711C5F048600FD9BAF /* Emotion.swift */,
-				72D4D7741C5F053A00FD9BAF /* Mood.swift */,
-				72D4D7761C5F0A8100FD9BAF /* EmotionalSpectrum.swift */,
+				72D68B2D1C62F424003AAA5D /* emotion */,
 				72D4D7891C60570D00FD9BAF /* User.swift */,
 				72D4D78B1C60576700FD9BAF /* MyFirebase.swift */,
 			);
@@ -131,6 +129,16 @@
 				72D4D7641C5EF69900FD9BAF /* Info.plist */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		72D68B2D1C62F424003AAA5D /* emotion */ = {
+			isa = PBXGroup;
+			children = (
+				72D4D7711C5F048600FD9BAF /* Emotion.swift */,
+				72D4D7741C5F053A00FD9BAF /* Mood.swift */,
+				72D4D7761C5F0A8100FD9BAF /* EmotionalSpectrum.swift */,
+			);
+			name = emotion;
 			sourceTree = "<group>";
 		};
 		F9FFA6DE9D315A0B7CAE7288 /* Frameworks */ = {
