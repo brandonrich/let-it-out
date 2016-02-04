@@ -181,7 +181,6 @@
                                 <rect key="frame" x="207.5" y="291" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <action selector="register:" destination="QRa-wc-Apo" eventType="touchUpInside" id="ExI-Uq-Sa3"/>
                                     <segue destination="Bun-A8-JcS" kind="show" id="BFH-pQ-sAs"/>
                                 </connections>
                             </button>
@@ -208,7 +207,7 @@
                                 <rect key="frame" x="350.5" y="291" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <action selector="login:" destination="QRa-wc-Apo" eventType="touchUpInside" id="Y29-hR-9eN"/>
+                                    <segue destination="InF-3w-3Sv" kind="show" id="v3N-df-SRM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -316,16 +315,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uw9-mH-IEK">
                                 <rect key="frame" x="271" y="347.5" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
-                                <connections>
-                                    <action selector="register:" destination="xhJ-yg-d5v" eventType="touchUpInside" id="PI1-0P-Esp"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iw-LM-WrM">
                                 <rect key="frame" x="279" y="287.5" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
-                                <connections>
-                                    <action selector="login:" destination="xhJ-yg-d5v" eventType="touchUpInside" id="6fb-jy-OTQ"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WT9-op-fFq">
                                 <rect key="frame" x="218.5" y="227.5" width="163" height="30"/>
@@ -412,9 +405,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-BF-aHm">
                                 <rect key="frame" x="280" y="298" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
-                                <connections>
-                                    <action selector="login:" destination="cHv-dO-Vr7" eventType="touchUpInside" id="kqa-RG-4cy"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKp-Vs-t8e">
                                 <rect key="frame" x="252" y="238" width="97" height="30"/>
@@ -457,4 +447,7 @@
             <point key="canvasLocation" x="659" y="927"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="v3N-df-SRM"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -22,12 +22,30 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
- 
-    @IBAction func login(sender: UIButton) {
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        return true
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
+    
+
+    
+    func authenticate() {
+        let user = usernameInput.text!
+        let pass = passwordInput.text!
+        MyFirebase.sharedInstance.rootRef.authUser(user, password: pass) {
+            error, authData in
+            if error != nil {
+                // an error occured while attempting login
+            } else {
+                // user is logged in, check authData for data
+            }
+        }
     }
 
-    @IBAction func register(sender: UIButton) {
-    }
     /*
     // MARK: - Navigation
 
