@@ -24,7 +24,40 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func validateForm() -> Bool {
+        let user = usernameInput.text!
+        let pwd = passwordInput.text!
+        let confirm = passwordConfirmInput.text!
+        let emptyInputs = user.isEmpty || pwd.isEmpty || confirm.isEmpty
+        
+        let  match = (pwd == confirm)
+        
+        return match && !emptyInputs
+        
+    }
+    
     @IBAction func submit(sender: UIButton) {
+        
+        if validateForm() {
+        
+        
+            if let name = usernameInput.text,
+                password = passwordInput.text {
+                MyFirebase.sharedInstance.rootRef.createUser(name, password: password,
+                    withValueCompletionBlock: { error, result in
+                        
+                        if error != nil {
+                            // There was an error creating the account
+                        } else {
+                            let uid = result["uid"] as? String
+                            print("Successfully created user account with uid: \(uid)")
+                            
+                        }
+                })
+            }
+        } else {
+            print("Bad inputs")
+        }
     }
 
     /*

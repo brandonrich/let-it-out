@@ -12,15 +12,6 @@ import Firebase
 class User {
     
     static func createRemote(name: String, password: String ) {
-        MyFirebase.sharedInstance.rootRef.createUser(name, password: password,
-        withValueCompletionBlock: { error, result in
         
-            if error != nil {
-                // There was an error creating the account
-            } else {
-                let uid = result["uid"] as? String
-                print("Successfully created user account with uid: \(uid)")
-            }
-        })
     }
 }
