@@ -551,7 +551,7 @@
                                 <rect key="frame" x="207.5" y="291" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="Bun-A8-JcS" kind="show" id="BFH-pQ-sAs"/>
+                                    <segue destination="Bun-A8-JcS" kind="show" identifier="registerSegue" id="BFH-pQ-sAs"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKV-zw-VDv">
@@ -577,9 +577,15 @@
                                 <rect key="frame" x="350.5" y="291" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <segue destination="InF-3w-3Sv" kind="show" identifier="loginSuccessSegue" id="v3N-df-SRM"/>
+                                    <segue destination="InF-3w-3Sv" kind="show" identifier="loginSegue" id="v3N-df-SRM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqX-fD-rTc">
+                                <rect key="frame" x="279" y="375" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.019441131789540381" green="0.78495896464646464" blue="0.2314071371225962" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -593,12 +599,15 @@
                             <constraint firstItem="F1A-1Q-q2c" firstAttribute="centerX" secondItem="XKJ-Gq-XQh" secondAttribute="centerX" id="W9S-kY-NFe"/>
                             <constraint firstItem="zQF-UL-uRp" firstAttribute="top" secondItem="nKV-zw-VDv" secondAttribute="bottom" constant="30" id="WFt-kH-7ww"/>
                             <constraint firstItem="nKV-zw-VDv" firstAttribute="top" secondItem="F1A-1Q-q2c" secondAttribute="bottom" constant="30" id="aBI-82-bOf"/>
+                            <constraint firstItem="VqX-fD-rTc" firstAttribute="top" secondItem="8AL-cP-J6J" secondAttribute="bottom" constant="311" id="aUw-uk-Rtr"/>
                             <constraint firstItem="F1A-1Q-q2c" firstAttribute="centerX" secondItem="6Ef-4f-Q9f" secondAttribute="centerX" id="pCv-Q5-bv7"/>
+                            <constraint firstItem="VqX-fD-rTc" firstAttribute="centerX" secondItem="XKJ-Gq-XQh" secondAttribute="centerX" id="zmR-xb-ac4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Let It Out" id="MFu-zd-lLr"/>
                     <connections>
                         <outlet property="passwordInput" destination="nKV-zw-VDv" id="zed-WH-0gL"/>
+                        <outlet property="successLabel" destination="VqX-fD-rTc" id="ZLI-vW-PhH"/>
                         <outlet property="usernameInput" destination="F1A-1Q-q2c" id="ceO-qb-3Ab"/>
                     </connections>
                 </viewController>

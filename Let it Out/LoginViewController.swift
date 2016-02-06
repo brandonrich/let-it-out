@@ -8,14 +8,31 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, ActionResultResponder {
 
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
+    
+    @IBOutlet weak var successLabel: UILabel!
+    
+    var success : Bool = false
+    var message : String = ""
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if ( success ) {
+            successLabel.text = message
+        } else {
+            successLabel.text = ""
+        }
+        success = false
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,12 +41,17 @@ class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        authenticate()
-        return false
+        if identifier == "loginSegue" {
+            authenticate()
+            return false
+        }
+        return true
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        if let registrationVC = segue.destinationViewController as? RegisterViewController {
+            registrationVC.caller = self
+        }
     }
     
 

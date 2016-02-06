@@ -13,9 +13,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var passwordConfirmInput: UITextField!
+    var caller : ActionResultResponder?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -51,6 +52,9 @@ class RegisterViewController: UIViewController {
                         } else {
                             let uid = result["uid"] as? String
                             print("Successfully created user account with uid: \(uid)")
+                            self.caller?.success = true
+                            self.caller?.message = "Registration Successful!"
+                            self.navigationController?.popViewControllerAnimated(true)
                             
                         }
                 })
@@ -60,6 +64,7 @@ class RegisterViewController: UIViewController {
         }
     }
 
+    
     /*
     // MARK: - Navigation
 
@@ -70,4 +75,9 @@ class RegisterViewController: UIViewController {
     }
     */
 
+}
+
+protocol ActionResultResponder {
+    var success : Bool {get set}
+    var message : String {get set}
 }
