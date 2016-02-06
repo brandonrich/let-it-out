@@ -11,7 +11,7 @@ import UIKit
 class WhyDoYouFeelThisWayViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    var reasons : [String] = ["reason","reason2"]
+    var reasons : [String] = ["Your own thoughts/actions","Another's words or actions", "Uncontrollable occurrence", "Chain of Events"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
