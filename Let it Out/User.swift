@@ -14,6 +14,7 @@ class User {
     var name : String
     var wakeUpTime : Int
     var sleepTime : Int
+    var events : [Event] = []
     
     init(name: String, wakeUpTime : Int, sleepTime: Int ) {
         self.name = name
