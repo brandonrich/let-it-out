@@ -11,7 +11,14 @@ import Firebase
 
 class User {
     
-    static func createRemote(name: String, password: String ) {
-        
+    var name : String
+    var wakeUpTime : Int
+    var sleepTime : Int
+    
+    init(name: String, wakeUpTime : Int, sleepTime: Int ) {
+        self.name = name
+        self.wakeUpTime = wakeUpTime
+        self.sleepTime = sleepTime
     }
+
 }

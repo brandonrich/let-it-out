@@ -262,10 +262,10 @@
             </objects>
             <point key="canvasLocation" x="2655" y="1610"/>
         </scene>
-        <!--Details-->
+        <!--Why Do You Feel This Way?-->
         <scene sceneID="d28-ZI-0OX">
             <objects>
-                <viewController title="Details" id="cbd-1L-oa6" sceneMemberID="viewController">
+                <viewController title="Why Do You Feel This Way?" id="cbd-1L-oa6" customClass="WhyDoYouFeelThisWayViewController" customModule="Let_it_Out" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TcZ-w5-WGY"/>
                         <viewControllerLayoutGuide type="bottom" id="mzA-Yr-mJC"/>
@@ -273,12 +273,50 @@
                     <view key="view" contentMode="scaleToFill" id="xcO-gG-zD5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l1Y-eG-Q3V">
+                                <rect key="frame" x="0.0" y="161" width="600" height="439"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reasonCell" id="Lmv-8f-2WO">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lmv-8f-2WO" id="86L-14-nUg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cbd-1L-oa6" id="xAn-S0-6Vo"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why do you feel this way?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNn-xN-yVm">
+                                <rect key="frame" x="201" y="97.5" width="198" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="l1Y-eG-Q3V" secondAttribute="trailing" id="3uQ-vR-Scb"/>
+                            <constraint firstItem="lNn-xN-yVm" firstAttribute="centerX" secondItem="xcO-gG-zD5" secondAttribute="centerX" id="Im4-eu-WWN"/>
+                            <constraint firstItem="l1Y-eG-Q3V" firstAttribute="leading" secondItem="xcO-gG-zD5" secondAttribute="leading" id="KV5-9o-nJE"/>
+                            <constraint firstItem="mzA-Yr-mJC" firstAttribute="top" secondItem="l1Y-eG-Q3V" secondAttribute="bottom" id="Mbx-sF-ZZN"/>
+                            <constraint firstItem="l1Y-eG-Q3V" firstAttribute="top" secondItem="TcZ-w5-WGY" secondAttribute="bottom" constant="97" id="doZ-MV-Z55"/>
+                            <constraint firstItem="l1Y-eG-Q3V" firstAttribute="top" secondItem="lNn-xN-yVm" secondAttribute="bottom" constant="43" id="lIw-Sn-O3q"/>
+                            <constraint firstItem="l1Y-eG-Q3V" firstAttribute="leading" secondItem="xcO-gG-zD5" secondAttribute="leadingMargin" id="pzs-Gn-tzy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l1Y-eG-Q3V" secondAttribute="trailing" id="v1N-Ic-Ag7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="l1Y-eG-Q3V" id="6NU-IU-rkf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xel-Q2-9oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2775" y="2658"/>
+            <point key="canvasLocation" x="2775" y="2701"/>
         </scene>
         <!--Choose Time-->
         <scene sceneID="Pxi-Mn-2IQ">
@@ -292,14 +330,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cPh-td-k1G">
-                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cPh-td-k1G">
+                                <rect key="frame" x="140" y="192" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="476305137.57020098">
                                     <!--2016-02-04 18:58:57 +0000-->
                                 </date>
                             </datePicker>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LlG-dr-Wq1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Choose Time" id="T9o-Wz-uJe">
                                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="Qik-bU-bf9">
@@ -318,8 +356,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LlG-dr-Wq1" firstAttribute="top" secondItem="7ZL-cC-pGO" secondAttribute="bottom" constant="-20" id="DF7-cW-419"/>
-                            <constraint firstItem="cPh-td-k1G" firstAttribute="top" secondItem="LlG-dr-Wq1" secondAttribute="bottom" constant="148" id="eK7-lr-S8m"/>
+                            <constraint firstItem="LlG-dr-Wq1" firstAttribute="top" secondItem="7ZL-cC-pGO" secondAttribute="bottom" id="DF7-cW-419"/>
+                            <constraint firstItem="cPh-td-k1G" firstAttribute="top" secondItem="LlG-dr-Wq1" secondAttribute="bottom" constant="128" id="eK7-lr-S8m"/>
                             <constraint firstItem="LlG-dr-Wq1" firstAttribute="leading" secondItem="Uab-z9-sAx" secondAttribute="leadingMargin" constant="-20" id="vCG-14-BH7"/>
                             <constraint firstItem="cPh-td-k1G" firstAttribute="centerX" secondItem="Uab-z9-sAx" secondAttribute="centerX" id="vK9-oS-CUH"/>
                             <constraint firstItem="LlG-dr-Wq1" firstAttribute="width" secondItem="Uab-z9-sAx" secondAttribute="width" id="zme-6d-JXM"/>
@@ -533,24 +571,6 @@
             </objects>
             <point key="canvasLocation" x="1471" y="927"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ewJ-Q6-TbG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vn4-6x-yC8" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="egg-j9-qh1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="InF-3w-3Sv" kind="relationship" relationship="rootViewController" id="DzY-2H-5wn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4XT-cz-ZKt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="303" y="1740"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="aUo-7F-LrS">
             <objects>
@@ -617,6 +637,5 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="THm-RK-XOa"/>
-        <segue reference="v3N-df-SRM"/>
     </inferredMetricsTieBreakers>
 </document>

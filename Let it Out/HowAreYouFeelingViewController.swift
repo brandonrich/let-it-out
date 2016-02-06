@@ -19,7 +19,6 @@ class HowAreYouFeelingViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
 
         // Write data to Firebase
         MyFirebase.sharedInstance.rootRef.setValue("Do you have data? You'll love Firebase2. :-)")
@@ -29,8 +28,6 @@ class HowAreYouFeelingViewController: UIViewController, UITableViewDelegate, UIT
             snapshot in
             print("\(snapshot.key) -> \(snapshot.value)")
         })
-        
-        User.createRemote("brich@nd.edu", password: "foo")
         
         // Do any additional setup after loading the view.
     }

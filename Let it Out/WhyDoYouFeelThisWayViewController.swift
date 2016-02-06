@@ -1,5 +1,5 @@
 //
-//  ChooseTimeViewController.swift
+//  WhyDoYouFeelThisWayViewController.swift
 //  Let it Out
 //
 //  Created by Brandon Rich2 on 2/4/16.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ChooseTimeViewController: UIViewController {
+class WhyDoYouFeelThisWayViewController: UIViewController, UITableViewDataSource {
 
-
-    var textField : UITextField?
-
-
-    @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var tableView: UITableView!
+    var reasons : [String] = ["reason","reason2"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,14 +24,17 @@ class ChooseTimeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return reasons.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("reasonCell", forIndexPath: indexPath)
+        cell.textLabel?.text = reasons[indexPath.row]
+        return cell
+        
     }
 
-    @IBAction func save(sender: UIBarButtonItem) {
-        textField?.text = "hello"
-        dismissViewControllerAnimated(true, completion: nil)
-    }
     /*
     // MARK: - Navigation
 
