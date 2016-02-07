@@ -50,6 +50,10 @@ class User : CustomStringConvertible {
     }
     
     var events : [Event] = []
+
+    func addEvent( event : Event ) {
+        events.append(event)
+    }
     
     func asDictionary() -> [String:String] {
         return ["name" : self.name ?? "",

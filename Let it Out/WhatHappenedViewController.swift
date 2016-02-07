@@ -10,6 +10,7 @@ import UIKit
 
 class WhatHappenedViewController: UIViewController {
 
+    @IBOutlet weak var textInput: UITextView!
     var event : Event?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,10 @@ class WhatHappenedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func submit(sender: AnyObject) {
+        event?.detail = textInput.text
+        User.currentUser.addEvent(event!)
+    }
 
     /*
     // MARK: - Navigation
