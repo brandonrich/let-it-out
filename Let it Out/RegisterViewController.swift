@@ -51,7 +51,11 @@ class RegisterViewController: UIViewController {
                             // There was an error creating the account
                         } else {
                             let uid = result["uid"] as? String
+                            
                             print("Successfully created user account with uid: \(uid)")
+                            
+                            User.setCurrentUser(uid!)
+                            
                             self.caller?.success = true
                             self.caller?.message = "Registration Successful!"
                             self.navigationController?.popViewControllerAnimated(true)
@@ -64,16 +68,6 @@ class RegisterViewController: UIViewController {
         }
     }
 
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

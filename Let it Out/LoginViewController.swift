@@ -65,11 +65,14 @@ class LoginViewController: UIViewController, ActionResultResponder {
                 // an error occured while attempting login
                 print("problem logging in")
             } else {
+                User.setCurrentUser(authData.uid)
                 // user is logged in, check authData for data
-                self.performSegueWithIdentifier("loginSuccessSegue", sender: nil)
+//                self.setCurrentUser(name:String, wakeUpTime: Int, sleepTime: Int)
+                self.performSegueWithIdentifier("loginSegue", sender: nil)
             }
         }
     }
+    
 
     /*
     // MARK: - Navigation
