@@ -26,6 +26,16 @@ class WhatHappenedViewController: UIViewController {
     @IBAction func submit(sender: AnyObject) {
         event?.detail = textInput.text
         User.currentUser.addEvent(event!)
+        goBackToStart()
+    }
+    
+    func goBackToStart() {
+        let allViewControllers = self.navigationController?.viewControllers
+        for aViewController in allViewControllers! {
+            if aViewController.isKindOfClass(HowAreYouFeelingViewController) {
+                self.navigationController?.popToViewController(aViewController, animated:true)
+            }
+        }
     }
 
     /*
