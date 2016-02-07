@@ -27,6 +27,7 @@ class SetupViewController: UIViewController {
         User.currentUser.name = nameInput.text
         User.currentUser.wakeUpTime = wakeUpInput.text!
         User.currentUser.sleepTime = sleepInput.text!
+        User.currentUser.persist()
         print(User.currentUser)
         self.navigationController?.popViewControllerAnimated(true)
     }

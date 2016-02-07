@@ -11,6 +11,7 @@ import Firebase
 
 class User : CustomStringConvertible {
     
+    private var loaded = false
     private var internal_uid = ""
     var uid : String {
         get{
@@ -18,11 +19,16 @@ class User : CustomStringConvertible {
         }
         set {
             print("Got uid: \(newValue). Time to query for stuff")
+            if !loaded {
+              load(newValue)
+            }
+            loaded = true
             internal_uid = newValue
         }
     }
     var name : String?
     
+    // Times are stored internally as HHmm
     private var internalWakeUpTime : String = ""
     var wakeUpTime : String {
         get {
@@ -46,13 +52,26 @@ class User : CustomStringConvertible {
     var events : [Event] = []
     
     func asDictionary() -> [String:String] {
-        return ["foo":"bar"]
-      /*
-        return ["name" : self.name,
+        return ["name" : self.name ?? "",
                 "wakeUpTime" : String(self.wakeUpTime),
                 "sleepTime" : String(self.sleepTime)
                 ]
-*/
+    }
+
+    
+    func persist() {
+        MyFirebase.sharedInstance.rootRef.childByAppendingPath("users")
+            .childByAppendingPath(self.uid).setValue(self.asDictionary())
+    }
+    
+    func load(uid:String) {
+        let ref = MyFirebase.sharedInstance.rootRef.childByAppendingPath("users").childByAppendingPath(uid)
+        ref.childByAppendingPath("name").observeEventType(.Value, withBlock: {
+            userData in
+            print("\(userData.key) -> \(userData.value)")
+            self.name = String(userData.value)
+            
+        })
     }
     
     static let currentUser = User()
