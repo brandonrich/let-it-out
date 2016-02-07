@@ -29,4 +29,10 @@ class Event : CustomStringConvertible {
                "Reason: \(reason)\n" +
                "Detail: \(detail)"
     }
+    
+    var dateString : String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "M/d/yyyy hh:mm a"
+        return formatter.stringFromDate(self.dateTime)
+    }
 }

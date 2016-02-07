@@ -86,5 +86,6 @@ class User : CustomStringConvertible {
     var description : String {
         return "Name: \(name)\nWakeup: \(wakeUpTime)\nSleep: \(sleepTime)"
     }
+    
 
 }

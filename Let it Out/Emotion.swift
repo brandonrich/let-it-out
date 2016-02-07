@@ -21,6 +21,6 @@ class Emotion : CustomStringConvertible {
     }
     
     var description : String {
-        return "\(name): \(emoji)"
+        return "\(name) \(emoji)"
     }
 }
