@@ -15,14 +15,14 @@ class EmotionalSpectrum {
     init() {
         moods = []
         let positive = Mood(name: "Positive")
-        positive.addEmotion( Emotion(name: "Excitement", value: 0, emoji: "😄") )
-        positive.addEmotion( Emotion(name: "Laughter", value: 0, emoji: "😂") )
-        positive.addEmotion( Emotion(name: "Peace", value: 0, emoji: "😇") )
+        positive.addEmotion( Emotion(name: "Excitement", value: 3, emoji: "😄") )
+        positive.addEmotion( Emotion(name: "Laughter", value: 2, emoji: "😂") )
+        positive.addEmotion( Emotion(name: "Peace", value: 1, emoji: "😇") )
         let neutral = Mood(name: "Neutral")
         let negative = Mood(name: "Negative")
-        negative.addEmotion( Emotion(name: "Sadness", value: 0, emoji: "😔") )
-        negative.addEmotion( Emotion(name: "Anxiety", value: 0, emoji: "😕") )
-        negative.addEmotion( Emotion(name: "Anger", value: 0, emoji: "😡") )
+        negative.addEmotion( Emotion(name: "Sadness", value: -1, emoji: "😔") )
+        negative.addEmotion( Emotion(name: "Anxiety", value: -2, emoji: "😕") )
+        negative.addEmotion( Emotion(name: "Anger", value: -3, emoji: "😡") )
         moods = [positive,neutral,negative]
     }
     

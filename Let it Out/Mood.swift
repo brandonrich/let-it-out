@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Mood {
+class Mood : CustomStringConvertible {
     internal var name : String
     private var emotions : [Emotion]
     
@@ -27,5 +27,9 @@ class Mood {
     
     func emotionAt( index : Int ) -> Emotion {
         return emotions[index]
+    }
+    
+    var description : String {
+        return name
     }
 }

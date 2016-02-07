@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Emotion {
+class Emotion : CustomStringConvertible {
     
     var name : String
     var value : Int
@@ -18,5 +18,9 @@ class Emotion {
         self.name = name
         self.value = value
         self.emoji = emoji
+    }
+    
+    var description : String {
+        return "\(name): \(emoji)"
     }
 }

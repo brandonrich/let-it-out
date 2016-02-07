@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Event {
+class Event : CustomStringConvertible {
     var mood : Mood
     var emotion : Emotion
     var reason : String
@@ -21,5 +21,12 @@ class Event {
         self.reason=reason
         self.detail=detail
         self.dateTime = NSDate()
+    }
+    
+    var description : String {
+        return "Mood: \(mood)\n" +
+               "Emotion: \(emotion)\n" +
+               "Reason: \(reason)\n" +
+               "Detail: \(detail)"
     }
 }

@@ -45,6 +45,15 @@ class FeelingDetailViewController: UIViewController, UITableViewDataSource, UITa
         }
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let whyVC = segue.destinationViewController as? WhyDoYouFeelThisWayViewController,
+            cell = sender as? UITableViewCell,
+            indexPath = self.tableView.indexPathForCell(cell) {
+                let e = Event(mood:mood!, emotion: mood!.emotionAt(indexPath.row),reason:"", detail:"")
+                whyVC.event = e
+        }
+    }
 
     
 

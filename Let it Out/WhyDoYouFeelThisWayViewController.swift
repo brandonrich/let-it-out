@@ -10,12 +10,13 @@ import UIKit
 
 class WhyDoYouFeelThisWayViewController: UIViewController, UITableViewDataSource {
 
+    var event : Event?
     @IBOutlet weak var tableView: UITableView!
     var reasons : [String] = ["Your own thoughts/actions","Another's words or actions", "Uncontrollable occurrence", "Chain of Events"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(event!)
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +34,15 @@ class WhyDoYouFeelThisWayViewController: UIViewController, UITableViewDataSource
         cell.textLabel?.text = reasons[indexPath.row]
         return cell
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let whatHappenedVC = segue.destinationViewController as? WhatHappenedViewController,
+            cell = sender as? UITableViewCell,
+            indexPath = self.tableView.indexPathForCell(cell) {
+                event?.reason = reasons[indexPath.row]
+                whatHappenedVC.event = event
+        }
     }
 
     /*
