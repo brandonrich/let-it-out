@@ -11,10 +11,9 @@ import UIKit
 class ChooseTimeViewController: UIViewController {
 
 
-    var textField : UITextField?
-
-
+    var textField : UITextField?  // the text field we are setting on the previous page
     @IBOutlet weak var timePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +30,13 @@ class ChooseTimeViewController: UIViewController {
     }
 
     @IBAction func save(sender: UIBarButtonItem) {
-        textField?.text = "hello"
+        
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "hh:mm a "
+        textField?.text = formatter.stringFromDate(timePicker.date)
+        
+        formatter.dateFormat = "HHmm"
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     /*
@@ -45,3 +50,6 @@ class ChooseTimeViewController: UIViewController {
     */
 
 }
+
+
+

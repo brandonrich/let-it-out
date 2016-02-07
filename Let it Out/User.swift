@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class User {
+class User : CustomStringConvertible {
     
     private var internal_uid = ""
     var uid : String {
@@ -22,8 +22,27 @@ class User {
         }
     }
     var name : String?
-    var wakeUpTime : Int?
-    var sleepTime : Int?
+    
+    private var internalWakeUpTime : String = ""
+    var wakeUpTime : String {
+        get {
+            return internalWakeUpTime
+        }
+        set {
+            internalWakeUpTime = newValue.reformatTimeString("hh:mm a", toFormat: "HHmm")
+        }
+    }
+    
+    private var internalSleepTime : String = ""
+    var sleepTime : String {
+        get {
+            return internalSleepTime
+        }
+        set {
+            internalSleepTime = newValue.reformatTimeString("hh:mm a", toFormat: "HHmm")
+        }
+    }
+    
     var events : [Event] = []
     
     func asDictionary() -> [String:String] {
@@ -39,6 +58,10 @@ class User {
     static let currentUser = User()
     static func setCurrentUser(uid: String) {
         User.currentUser.uid = uid
+    }
+
+    var description : String {
+        return "Name: \(name)\nWakeup: \(wakeUpTime)\nSleep: \(sleepTime)"
     }
 
 }

@@ -16,7 +16,7 @@ class MyFirebase {
     static let sharedInstance = MyFirebase()
     
     
-    init() {
+    private init() {
        rootRef = Firebase(url:firebaseURL)
     }
 }

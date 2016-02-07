@@ -351,6 +351,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9P-uG-cTP">
                                 <rect key="frame" x="284" y="365" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="Ja7-Ik-4ma" eventType="touchUpInside" id="ojD-B9-dY6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -374,6 +377,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameInput" destination="eki-Ao-tta" id="lq9-Af-aoa"/>
+                        <outlet property="sleepInput" destination="xqc-5q-qGt" id="evc-Ao-7Wb"/>
+                        <outlet property="wakeUpInput" destination="qbt-I4-9Ej" id="Y2P-FG-0s7"/>
                         <segue destination="vKS-hs-cUS" kind="presentation" identifier="sleep" id="WEX-eu-IvL"/>
                         <segue destination="vKS-hs-cUS" kind="presentation" identifier="wakeup" id="THm-RK-XOa"/>
                     </connections>

@@ -10,12 +10,27 @@ import UIKit
 
 class SetupViewController: UIViewController {
 
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var wakeUpInput: UITextField!
+    @IBOutlet weak var sleepInput: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameInput.text = User.currentUser.name ?? ""
+        wakeUpInput.text = User.currentUser.wakeUpTime ?? ""
+        sleepInput.text = User.currentUser.sleepTime ?? ""
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func save(sender: UIButton) {
+        User.currentUser.name = nameInput.text
+        User.currentUser.wakeUpTime = wakeUpInput.text!
+        User.currentUser.sleepTime = sleepInput.text!
+        print(User.currentUser)
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
