@@ -68,10 +68,12 @@ class LoginViewController: UIViewController, ActionResultResponder {
                 User.setCurrentUser(authData.uid)
                 
                 // TMP
+                /*
                 let spec = EmotionalSpectrum()
                 let mood = spec.moods[0]
                 let event = Event(mood:mood, emotion:mood.emotionAt(0),reason:"My actions", detail: "something")
                 User.currentUser.addEvent(event)
+*/
                 // TMP
                 
                 // user is logged in, check authData for data

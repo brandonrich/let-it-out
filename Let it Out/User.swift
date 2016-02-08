@@ -52,15 +52,8 @@ class User : CustomStringConvertible {
     var events : [Event] = []
 
     func addEvent( event : Event ) {
-        let ref = MyFirebase.sharedInstance.rootRef.childByAppendingPath("users").childByAppendingPath(uid)
         events.append(event)
-        
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "MdyyyyHHmms"
-        let eventRef = ref.childByAppendingPath("events").childByAppendingPath(formatter.stringFromDate(event.dateTime))
-        
-        // credit http://www.raywenderlich.com/109706/firebase-tutorial-getting-started
-        eventRef.setValue(event.toAnyObject())
+        event.persistForUserID(uid)
         
         
     }
@@ -86,10 +79,15 @@ class User : CustomStringConvertible {
             self.name = userData.value["name"] as? String
             self.internalSleepTime = String(userData.value["sleepTime"])
             self.internalWakeUpTime = String(userData.value["wakeUpTime"])
-            
-            //var gotevents = userData.value["events"]
-            
         })
+        ref.childByAppendingPath("events").observeEventType(.Value, withBlock: {
+            snapshot in
+            for item in snapshot.children {
+                let someEvent = Event(snapshot: item as! FDataSnapshot)
+                self.events.append(someEvent)  // access private reference so we don't trigger a write to firebase
+            }
+        })
+        
 
     }
     
