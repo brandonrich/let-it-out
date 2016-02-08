@@ -52,7 +52,17 @@ class User : CustomStringConvertible {
     var events : [Event] = []
 
     func addEvent( event : Event ) {
+        let ref = MyFirebase.sharedInstance.rootRef.childByAppendingPath("users").childByAppendingPath(uid)
         events.append(event)
+        
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "MdyyyyHHmms"
+        let eventRef = ref.childByAppendingPath("events").childByAppendingPath(formatter.stringFromDate(event.dateTime))
+        
+        // credit http://www.raywenderlich.com/109706/firebase-tutorial-getting-started
+        eventRef.setValue(event.toAnyObject())
+        
+        
     }
     
     func asDictionary() -> [String:String] {
@@ -70,12 +80,17 @@ class User : CustomStringConvertible {
     
     func load(uid:String) {
         let ref = MyFirebase.sharedInstance.rootRef.childByAppendingPath("users").childByAppendingPath(uid)
-        ref.childByAppendingPath("name").observeEventType(.Value, withBlock: {
+        ref.observeEventType(.Value, withBlock: {
             userData in
-            print("\(userData.key) -> \(userData.value)")
-            self.name = String(userData.value)
+            print("Triggered! \(userData.key) -> \(userData.value)")
+            self.name = userData.value["name"] as? String
+            self.internalSleepTime = String(userData.value["sleepTime"])
+            self.internalWakeUpTime = String(userData.value["wakeUpTime"])
+            
+            //var gotevents = userData.value["events"]
             
         })
+
     }
     
     static let currentUser = User()

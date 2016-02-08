@@ -30,6 +30,25 @@ class Event : CustomStringConvertible {
                "Detail: \(detail)"
     }
     
+    func toAnyObject() -> AnyObject {
+        return [
+            "mood":mood.name,
+            "emotion": emotion.toAnyObject(),
+            "reason": reason,
+            "detail": detail
+        ]
+        /*
+        return [
+            "mood":mood.name,
+            "emotionValue": emotion.value,
+            "emotionName": emotion.name,
+            "emotionEmoji": emotion.emoji,
+            "reason": reason,
+            "detail": detail
+        ]
+*/
+    }
+    
     var dateString : String {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "M/d/yyyy hh:mm a"

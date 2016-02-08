@@ -23,4 +23,12 @@ class Emotion : CustomStringConvertible {
     var description : String {
         return "\(name) \(emoji)"
     }
+    
+    func toAnyObject() -> AnyObject {
+        return [
+            "name": name,
+            "value": value,
+            "emoji": emoji
+        ]
+    }
 }
