@@ -44,19 +44,14 @@ class Event : CustomStringConvertible {
         formatter.dateFormat = savedDateFormat
         dateTime = formatter.dateFromString(uid!)!
         
-        // TMP
+
         let spec = EmotionalSpectrum()
-        let mood = spec.moods[0]
-        self.mood = mood
-        emotion = mood.emotionAt(0)
-        //mTMP
-        /*
-        key = snapshot.key
-        name = snapshot.value["name"] as! String
-        addedByUser = snapshot.value["addedByUser"] as! String
-        completed = snapshot.value["completed"] as! Bool
-        ref = snapshot.ref
-*/
+        let moodName = snapshot.value["mood"] as! String
+        let mood = spec.moodWithName(moodName)
+        self.mood = mood!
+        
+        let emotionValue = snapshot.value["emotionValue"] as! Int
+        emotion = (mood?.emotionWithValue(emotionValue))!
     }
     
     func persistForUserID(uid : String) {
@@ -76,7 +71,8 @@ class Event : CustomStringConvertible {
             "mood":mood.name,
             "emotion": emotion.toAnyObject(),
             "reason": reason,
-            "detail": detail
+            "detail": detail,
+            "emotionValue": emotion.value
         ]
         /*
         return [

@@ -73,14 +73,14 @@ class User : CustomStringConvertible {
     
     func load(uid:String) {
         let ref = MyFirebase.sharedInstance.rootRef.childByAppendingPath("users").childByAppendingPath(uid)
-        ref.observeEventType(.Value, withBlock: {
+        ref.observeSingleEventOfType(.Value, withBlock: {
             userData in
             print("Triggered! \(userData.key) -> \(userData.value)")
             self.name = userData.value["name"] as? String
             self.internalSleepTime = String(userData.value["sleepTime"])
             self.internalWakeUpTime = String(userData.value["wakeUpTime"])
         })
-        ref.childByAppendingPath("events").observeEventType(.Value, withBlock: {
+        ref.childByAppendingPath("events").observeSingleEventOfType(.Value, withBlock: {
             snapshot in
             for item in snapshot.children {
                 let someEvent = Event(snapshot: item as! FDataSnapshot)

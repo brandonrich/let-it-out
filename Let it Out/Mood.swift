@@ -17,6 +17,15 @@ class Mood : CustomStringConvertible {
         emotions = []
     }
     
+    func emotionWithValue(value:Int) -> Emotion? {
+        for e in emotions {
+            if e.value == value {
+                return e
+            }
+        }
+        return nil
+    }
+    
     func addEmotion( emotion: Emotion )  {
         emotions.append(emotion)
     }
