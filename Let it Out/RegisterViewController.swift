@@ -55,6 +55,7 @@ class RegisterViewController: UIViewController {
                             print("Successfully created user account with uid: \(uid)")
                             
                             User.setCurrentUser(uid!)
+                            User.currentUser.persist()
                             
                             self.caller?.success = true
                             self.caller?.message = "Registration Successful!"
