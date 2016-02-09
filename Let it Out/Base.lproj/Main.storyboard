@@ -298,7 +298,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsJ-7x-8Cc">
-                                                    <rect key="frame" x="8" y="11.5" width="375" height="20.5"/>
+                                                    <rect key="frame" x="8" y="11" width="375" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="375" id="sMd-xb-udA"/>
                                                     </constraints>
@@ -331,21 +331,22 @@
                                     <outlet property="dataSource" destination="DPr-9J-fKn" id="P6Z-Zx-r41"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some kind of graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKa-SQ-5DA">
-                                <rect key="frame" x="225" y="153" width="150" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="letitout" translatesAutoresizingMaskIntoConstraints="NO" id="edU-00-dz7">
+                                <rect key="frame" x="0.0" y="64" width="600" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="1xE-OT-j9e"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GLA-Eq-DTC" firstAttribute="top" secondItem="clq-Hg-J1r" secondAttribute="bottom" constant="238" id="CxR-bQ-ELe"/>
                             <constraint firstItem="pGc-0D-JBu" firstAttribute="top" secondItem="GLA-Eq-DTC" secondAttribute="bottom" id="Nzy-bP-sY1"/>
+                            <constraint firstItem="edU-00-dz7" firstAttribute="top" secondItem="clq-Hg-J1r" secondAttribute="bottom" id="O9N-T1-3ep"/>
                             <constraint firstItem="GLA-Eq-DTC" firstAttribute="leading" secondItem="ide-TT-Cih" secondAttribute="leading" id="PGl-dM-Nbj"/>
+                            <constraint firstItem="edU-00-dz7" firstAttribute="leading" secondItem="ide-TT-Cih" secondAttribute="leadingMargin" constant="-20" id="fik-LB-Oi0"/>
                             <constraint firstAttribute="trailing" secondItem="GLA-Eq-DTC" secondAttribute="trailing" id="mCI-XS-cm6"/>
-                            <constraint firstItem="YKa-SQ-5DA" firstAttribute="top" secondItem="clq-Hg-J1r" secondAttribute="bottom" constant="89" id="z66-8C-kXh"/>
-                            <constraint firstItem="YKa-SQ-5DA" firstAttribute="centerX" secondItem="ide-TT-Cih" secondAttribute="centerX" id="zn2-I1-nYb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="edU-00-dz7" secondAttribute="trailing" constant="-20" id="oms-fx-zWd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -824,6 +825,9 @@
             <point key="canvasLocation" x="31" y="907"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="letitout" width="1280" height="782"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="THm-RK-XOa"/>
     </inferredMetricsTieBreakers>
