@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "User.(load(User) -&gt; (String) -&gt; ()).(closure #1):User.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userData.value[&quot;events&quot;][0]">
+            </PersistentString>
+            <PersistentString
+               value = "userData.value[&quot;events&quot;]!![&quot;event&quot;]!![&quot;text&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "userData.value[&quot;events&quot;]!![&quot;event&quot;]!![&quot;text&quot;]!!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

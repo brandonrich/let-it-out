@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import Firebase
 
 class HowAreYouFeelingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    let moods = ["Positive", "Neutral", "Negative"]
+    
+    
+    var spectrum = EmotionalSpectrum()
     let reuseIdentifier = "moodCell"
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,10 +35,17 @@ class HowAreYouFeelingViewController: UIViewController, UITableViewDelegate, UIT
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
-        cell.textLabel!.text = moods[indexPath.row]
+        cell.textLabel!.text = spectrum.moods[indexPath.row].name
         // Configure the cell...
         
         return cell
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let detailVC = segue.destinationViewController as? FeelingDetailViewController,
+            cell = sender as? UITableViewCell,
+            indexPath = self.tableView.indexPathForCell(cell) {
+                detailVC.mood = spectrum.moods[indexPath.row]
+        }
     }
     
 

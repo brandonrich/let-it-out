@@ -7,23 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		721AD57F1C6315A4003768B7 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD57E1C6315A4003768B7 /* SetupViewController.swift */; };
+		721AD5811C63D7E6003768B7 /* ChooseTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD5801C63D7E6003768B7 /* ChooseTimeViewController.swift */; };
+		721AD5831C643AB4003768B7 /* WhyDoYouFeelThisWayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD5821C643AB4003768B7 /* WhyDoYouFeelThisWayViewController.swift */; };
+		721AD5851C659E16003768B7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD5841C659E16003768B7 /* ProfileViewController.swift */; };
+		721AD5871C65A1A6003768B7 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD5861C65A1A6003768B7 /* GraphViewController.swift */; };
+		721AD58A1C65ABCB003768B7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD5891C65ABCB003768B7 /* Event.swift */; };
+		721AD5DC1C697DBA003768B7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD5DB1C697DBA003768B7 /* Util.swift */; };
+		721AD5E11C697DDC003768B7 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD5DD1C697DDC003768B7 /* EventDetailsViewController.swift */; };
+		721AD5E21C697DDC003768B7 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD5DE1C697DDC003768B7 /* EventTableViewCell.swift */; };
+		721AD5E41C697DDC003768B7 /* WhatHappenedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AD5E01C697DDC003768B7 /* WhatHappenedViewController.swift */; };
 		72D4D7591C5EF69900FD9BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7581C5EF69900FD9BAF /* AppDelegate.swift */; };
 		72D4D75E1C5EF69900FD9BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D4D75C1C5EF69900FD9BAF /* Main.storyboard */; };
 		72D4D7601C5EF69900FD9BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D4D75F1C5EF69900FD9BAF /* Assets.xcassets */; };
 		72D4D7631C5EF69900FD9BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D4D7611C5EF69900FD9BAF /* LaunchScreen.storyboard */; };
-		72D4D76B1C5EFC3900FD9BAF /* HowAreYouFeelingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D76A1C5EFC3900FD9BAF /* HowAreYouFeelingTableViewController.swift */; };
 		72D4D76E1C5F008900FD9BAF /* HowAreYouFeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D76D1C5F008900FD9BAF /* HowAreYouFeelingViewController.swift */; };
+		72D4D7701C5F043900FD9BAF /* FeelingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D76F1C5F043900FD9BAF /* FeelingDetailViewController.swift */; };
+		72D4D7721C5F048600FD9BAF /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7711C5F048600FD9BAF /* Emotion.swift */; };
+		72D4D7751C5F053A00FD9BAF /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7741C5F053A00FD9BAF /* Mood.swift */; };
+		72D4D7771C5F0A8100FD9BAF /* EmotionalSpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7761C5F0A8100FD9BAF /* EmotionalSpectrum.swift */; };
+		72D4D7791C5F137500FD9BAF /* EmotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7781C5F137500FD9BAF /* EmotionTableViewCell.swift */; };
+		72D4D78A1C60570D00FD9BAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D7891C60570D00FD9BAF /* User.swift */; };
+		72D4D78C1C60576700FD9BAF /* MyFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4D78B1C60576700FD9BAF /* MyFirebase.swift */; };
+		72D68B2F1C62F7E9003AAA5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D68B2E1C62F7E9003AAA5D /* LoginViewController.swift */; };
+		72D68B331C62FFD8003AAA5D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D68B321C62FFD8003AAA5D /* RegisterViewController.swift */; };
+		E36415DC7A5DD50EEC1C4A38 /* Pods_Let_it_Out.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD69DC6A992C8A4E505EC09 /* Pods_Let_it_Out.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07E2F4AB65BA144CB361F1B8 /* Pods-Let it Out.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let it Out.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Let it Out/Pods-Let it Out.debug.xcconfig"; sourceTree = "<group>"; };
+		5245C62E8DD215E8BA179CED /* Pods-Let it Out.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let it Out.release.xcconfig"; path = "Pods/Target Support Files/Pods-Let it Out/Pods-Let it Out.release.xcconfig"; sourceTree = "<group>"; };
+		721AD57E1C6315A4003768B7 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		721AD5801C63D7E6003768B7 /* ChooseTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTimeViewController.swift; sourceTree = "<group>"; };
+		721AD5821C643AB4003768B7 /* WhyDoYouFeelThisWayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhyDoYouFeelThisWayViewController.swift; sourceTree = "<group>"; };
+		721AD5841C659E16003768B7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		721AD5861C65A1A6003768B7 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		721AD5891C65ABCB003768B7 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		721AD5DB1C697DBA003768B7 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		721AD5DD1C697DDC003768B7 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		721AD5DE1C697DDC003768B7 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		721AD5E01C697DDC003768B7 /* WhatHappenedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappenedViewController.swift; sourceTree = "<group>"; };
 		72D4D7551C5EF69900FD9BAF /* Let it Out.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let it Out.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D4D7581C5EF69900FD9BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72D4D75D1C5EF69900FD9BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72D4D75F1C5EF69900FD9BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72D4D7621C5EF69900FD9BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72D4D7641C5EF69900FD9BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72D4D76A1C5EFC3900FD9BAF /* HowAreYouFeelingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowAreYouFeelingTableViewController.swift; sourceTree = "<group>"; };
 		72D4D76D1C5F008900FD9BAF /* HowAreYouFeelingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowAreYouFeelingViewController.swift; sourceTree = "<group>"; };
+		72D4D76F1C5F043900FD9BAF /* FeelingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelingDetailViewController.swift; sourceTree = "<group>"; };
+		72D4D7711C5F048600FD9BAF /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
+		72D4D7741C5F053A00FD9BAF /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		72D4D7761C5F0A8100FD9BAF /* EmotionalSpectrum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionalSpectrum.swift; sourceTree = "<group>"; };
+		72D4D7781C5F137500FD9BAF /* EmotionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionTableViewCell.swift; sourceTree = "<group>"; };
+		72D4D7891C60570D00FD9BAF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		72D4D78B1C60576700FD9BAF /* MyFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFirebase.swift; sourceTree = "<group>"; };
+		72D68B2E1C62F7E9003AAA5D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		72D68B321C62FFD8003AAA5D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DDD69DC6A992C8A4E505EC09 /* Pods_Let_it_Out.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_it_Out.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +71,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E36415DC7A5DD50EEC1C4A38 /* Pods_Let_it_Out.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47121AB3353B84B98522AACE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07E2F4AB65BA144CB361F1B8 /* Pods-Let it Out.debug.xcconfig */,
+				5245C62E8DD215E8BA179CED /* Pods-Let it Out.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		721AD5881C65ABB7003768B7 /* event */ = {
+			isa = PBXGroup;
+			children = (
+				721AD5891C65ABCB003768B7 /* Event.swift */,
+			);
+			name = event;
+			sourceTree = "<group>";
+		};
 		72D4D74C1C5EF69900FD9BAF = {
 			isa = PBXGroup;
 			children = (
 				72D4D7571C5EF69900FD9BAF /* Let it Out */,
 				72D4D7561C5EF69900FD9BAF /* Products */,
+				47121AB3353B84B98522AACE /* Pods */,
+				F9FFA6DE9D315A0B7CAE7288 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +116,10 @@
 		72D4D7571C5EF69900FD9BAF /* Let it Out */ = {
 			isa = PBXGroup;
 			children = (
+				72D4D77B1C5F138900FD9BAF /* Other */,
+				72D4D77A1C5F137A00FD9BAF /* View */,
+				72D4D7731C5F052C00FD9BAF /* Model */,
 				72D4D76C1C5EFC3E00FD9BAF /* ViewControllers */,
-				72D4D7581C5EF69900FD9BAF /* AppDelegate.swift */,
-				72D4D75C1C5EF69900FD9BAF /* Main.storyboard */,
-				72D4D75F1C5EF69900FD9BAF /* Assets.xcassets */,
-				72D4D7611C5EF69900FD9BAF /* LaunchScreen.storyboard */,
-				72D4D7641C5EF69900FD9BAF /* Info.plist */,
 			);
 			path = "Let it Out";
 			sourceTree = "<group>";
@@ -69,10 +127,70 @@
 		72D4D76C1C5EFC3E00FD9BAF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				72D4D76A1C5EFC3900FD9BAF /* HowAreYouFeelingTableViewController.swift */,
+				721AD57E1C6315A4003768B7 /* SetupViewController.swift */,
+				721AD5801C63D7E6003768B7 /* ChooseTimeViewController.swift */,
+				721AD5821C643AB4003768B7 /* WhyDoYouFeelThisWayViewController.swift */,
+				721AD5841C659E16003768B7 /* ProfileViewController.swift */,
+				721AD5861C65A1A6003768B7 /* GraphViewController.swift */,
+				72D68B321C62FFD8003AAA5D /* RegisterViewController.swift */,
+				72D68B2E1C62F7E9003AAA5D /* LoginViewController.swift */,
+				72D4D76F1C5F043900FD9BAF /* FeelingDetailViewController.swift */,
 				72D4D76D1C5F008900FD9BAF /* HowAreYouFeelingViewController.swift */,
+				721AD5E01C697DDC003768B7 /* WhatHappenedViewController.swift */,
+				721AD5DD1C697DDC003768B7 /* EventDetailsViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72D4D7731C5F052C00FD9BAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				721AD5881C65ABB7003768B7 /* event */,
+				72D68B2D1C62F424003AAA5D /* emotion */,
+				72D4D7891C60570D00FD9BAF /* User.swift */,
+				72D4D78B1C60576700FD9BAF /* MyFirebase.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		72D4D77A1C5F137A00FD9BAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72D4D75C1C5EF69900FD9BAF /* Main.storyboard */,
+				72D4D7781C5F137500FD9BAF /* EmotionTableViewCell.swift */,
+				721AD5DE1C697DDC003768B7 /* EventTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		72D4D77B1C5F138900FD9BAF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				721AD5DB1C697DBA003768B7 /* Util.swift */,
+				72D4D7581C5EF69900FD9BAF /* AppDelegate.swift */,
+				72D4D75F1C5EF69900FD9BAF /* Assets.xcassets */,
+				72D4D7611C5EF69900FD9BAF /* LaunchScreen.storyboard */,
+				72D4D7641C5EF69900FD9BAF /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		72D68B2D1C62F424003AAA5D /* emotion */ = {
+			isa = PBXGroup;
+			children = (
+				72D4D7711C5F048600FD9BAF /* Emotion.swift */,
+				72D4D7741C5F053A00FD9BAF /* Mood.swift */,
+				72D4D7761C5F0A8100FD9BAF /* EmotionalSpectrum.swift */,
+			);
+			name = emotion;
+			sourceTree = "<group>";
+		};
+		F9FFA6DE9D315A0B7CAE7288 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDD69DC6A992C8A4E505EC09 /* Pods_Let_it_Out.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72D4D7671C5EF69900FD9BAF /* Build configuration list for PBXNativeTarget "Let it Out" */;
 			buildPhases = (
+				F76DE1F7E61213FEF4EB16C8 /* Check Pods Manifest.lock */,
 				72D4D7511C5EF69900FD9BAF /* Sources */,
 				72D4D7521C5EF69900FD9BAF /* Frameworks */,
 				72D4D7531C5EF69900FD9BAF /* Resources */,
+				D1525ED4C68B0E8C2AE9082E /* Embed Pods Frameworks */,
+				4983501E016669732E4B940B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,14 +263,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4983501E016669732E4B940B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Let it Out/Pods-Let it Out-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1525ED4C68B0E8C2AE9082E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Let it Out/Pods-Let it Out-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F76DE1F7E61213FEF4EB16C8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		72D4D7511C5EF69900FD9BAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D4D7701C5F043900FD9BAF /* FeelingDetailViewController.swift in Sources */,
+				721AD5DC1C697DBA003768B7 /* Util.swift in Sources */,
+				72D68B331C62FFD8003AAA5D /* RegisterViewController.swift in Sources */,
+				72D4D7771C5F0A8100FD9BAF /* EmotionalSpectrum.swift in Sources */,
+				72D4D7721C5F048600FD9BAF /* Emotion.swift in Sources */,
+				721AD57F1C6315A4003768B7 /* SetupViewController.swift in Sources */,
+				721AD5871C65A1A6003768B7 /* GraphViewController.swift in Sources */,
+				72D4D7791C5F137500FD9BAF /* EmotionTableViewCell.swift in Sources */,
+				721AD5E21C697DDC003768B7 /* EventTableViewCell.swift in Sources */,
+				721AD5831C643AB4003768B7 /* WhyDoYouFeelThisWayViewController.swift in Sources */,
+				721AD58A1C65ABCB003768B7 /* Event.swift in Sources */,
+				721AD5E41C697DDC003768B7 /* WhatHappenedViewController.swift in Sources */,
+				721AD5811C63D7E6003768B7 /* ChooseTimeViewController.swift in Sources */,
+				721AD5E11C697DDC003768B7 /* EventDetailsViewController.swift in Sources */,
+				72D4D78A1C60570D00FD9BAF /* User.swift in Sources */,
 				72D4D7591C5EF69900FD9BAF /* AppDelegate.swift in Sources */,
+				72D4D78C1C60576700FD9BAF /* MyFirebase.swift in Sources */,
 				72D4D76E1C5F008900FD9BAF /* HowAreYouFeelingViewController.swift in Sources */,
-				72D4D76B1C5EFC3900FD9BAF /* HowAreYouFeelingTableViewController.swift in Sources */,
+				721AD5851C659E16003768B7 /* ProfileViewController.swift in Sources */,
+				72D68B2F1C62F7E9003AAA5D /* LoginViewController.swift in Sources */,
+				72D4D7751C5F053A00FD9BAF /* Mood.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +447,7 @@
 		};
 		72D4D7681C5EF69900FD9BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07E2F4AB65BA144CB361F1B8 /* Pods-Let it Out.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Let it Out/Info.plist";
@@ -271,6 +459,7 @@
 		};
 		72D4D7691C5EF69900FD9BAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5245C62E8DD215E8BA179CED /* Pods-Let it Out.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Let it Out/Info.plist";
@@ -299,6 +488,7 @@
 				72D4D7691C5EF69900FD9BAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
