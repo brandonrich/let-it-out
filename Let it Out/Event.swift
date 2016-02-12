@@ -12,7 +12,7 @@ import Firebase
 class Event : CustomStringConvertible {
     var uid : String?
     var mood : Mood
-    var emotion : Emotion
+    var emotion : Emotion?
     var reason : String
     var detail : String
     var dateTime : NSDate
@@ -51,7 +51,7 @@ class Event : CustomStringConvertible {
         self.mood = mood!
         
         let emotionValue = snapshot.value["emotionValue"] as! Int
-        emotion = (mood?.emotionWithValue(emotionValue))!
+        emotion = (mood?.emotionWithValue(emotionValue))
     }
     
     func persistForUserID(uid : String) {
@@ -69,10 +69,10 @@ class Event : CustomStringConvertible {
     func toAnyObject() -> AnyObject {
         return [
             "mood":mood.name,
-            "emotion": emotion.toAnyObject(),
+            "emotion": emotion!.toAnyObject(),
             "reason": reason,
             "detail": detail,
-            "emotionValue": emotion.value
+            "emotionValue": emotion!.value
         ]
         /*
         return [

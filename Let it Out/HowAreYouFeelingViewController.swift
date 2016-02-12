@@ -41,11 +41,28 @@ class HowAreYouFeelingViewController: UIViewController, UITableViewDelegate, UIT
         return cell
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let detailVC = segue.destinationViewController as? FeelingDetailViewController,
-            cell = sender as? UITableViewCell,
-            indexPath = self.tableView.indexPathForCell(cell) {
+        if segue.identifier == "HowToFeelingSegue",
+            let detailVC = segue.destinationViewController as? FeelingDetailViewController,
+            indexPath = self.tableView.indexPathForSelectedRow {
                 detailVC.mood = spectrum.moods[indexPath.row]
+        } else if segue.identifier == "HowToWhySegue" {
+            let whyVC = segue.destinationViewController as? WhyDoYouFeelThisWayViewController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            let mood = spectrum.moods[indexPath!.row]
+            let e = Event(mood:mood, emotion: Emotion(name: "Neutral", value: 0, emoji: ""),reason:"", detail:"")
+            whyVC!.event = e
         }
+    }
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "HowToFeelingSegue" {
+            let indexPath = self.tableView.indexPathForSelectedRow
+            let mood = spectrum.moods[indexPath!.row]
+            if mood.emotionCount() == 0 {
+                self.performSegueWithIdentifier("HowToWhySegue", sender: nil)
+                return false
+            }
+        }
+        return true
     }
     
 
