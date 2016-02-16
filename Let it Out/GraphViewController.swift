@@ -32,7 +32,7 @@ class GraphViewController: UIViewController, UITableViewDataSource {
         
         if let eventCell = cell as? EventTableViewCell {
             eventCell.dateLabel.text = events[indexPath.row].dateString
-            eventCell.emojiLabel.text = events[indexPath.row].emotion.emoji
+            eventCell.emojiLabel.text = events[indexPath.row].emotion?.emoji
         }
         return cell
     }
