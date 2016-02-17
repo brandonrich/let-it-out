@@ -9,6 +9,12 @@
 import UIKit
 
 class WhoMadeYouFeelThisWayViewController: UIViewController {
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var whatDidTheyDoTextField: UITextField!
+    @IBOutlet weak var textInput: UITextView!
+    var event: Event?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
