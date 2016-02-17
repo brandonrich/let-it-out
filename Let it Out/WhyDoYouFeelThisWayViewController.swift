@@ -37,22 +37,31 @@ class WhyDoYouFeelThisWayViewController: UIViewController, UITableViewDataSource
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let whatHappenedVC = segue.destinationViewController as? WhatHappenedViewController,
-            cell = sender as? UITableViewCell,
-            indexPath = self.tableView.indexPathForCell(cell) {
+        if segue.identifier == "WhyToWhatSegue",
+            let whatHappenedVC = segue.destinationViewController as? WhatHappenedViewController,
+            indexPath = self.tableView.indexPathForSelectedRow {
                 event?.reason = reasons[indexPath.row]
                 whatHappenedVC.event = event
+        } else if segue.identifier == "WhyToWhoSegue",
+            let whoDidThisVC = segue.destinationViewController as? WhoMadeYouFeelThisWayViewController,
+            indexPath = self.tableView.indexPathForSelectedRow {
+                event?.reason = reasons[indexPath.row]
+                whoDidThisVC.event = event
+        } else {
+            print("Cannot tell what segue you are taking")
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "WhyToWhatSegue",
+            let indexPath = self.tableView.indexPathForSelectedRow {
+                let anothersWordsCellClicked = (indexPath.row == 1)
+                if(anothersWordsCellClicked) {
+                    self.performSegueWithIdentifier("WhyToWhoSegue", sender: nil)
+                    return false
+                }
+        }
+        return true
     }
-    */
 
 }

@@ -478,7 +478,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="jEG-Pm-gf7" kind="show" id="UEN-dQ-Ve4"/>
+                                            <segue destination="jEG-Pm-gf7" kind="show" identifier="WhyToWhatSegue" id="UEN-dQ-Ve4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -513,6 +513,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="l1Y-eG-Q3V" id="6NU-IU-rkf"/>
+                        <segue destination="Jrw-lj-wlr" kind="show" identifier="WhyToWhoSegue" id="PeD-QE-Zft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xel-Q2-9oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -539,16 +540,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iPU-Sn-17u">
-                                <rect key="frame" x="0.0" y="64" width="600" height="400"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="Vjm-My-Crz"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wJ-pg-ghL">
                                 <rect key="frame" x="276" y="510" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
@@ -556,6 +547,15 @@
                                     <action selector="submit:" destination="jEG-Pm-gf7" eventType="touchUpInside" id="ZpI-Ag-V4c"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Nightmare about neuroscience test. Dreamed it was essay format." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iPU-Sn-17u">
+                                <rect key="frame" x="0.0" y="64" width="600" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Vjm-My-Crz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -574,6 +574,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFn-nJ-n2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3671" y="2710"/>
+        </scene>
+        <!--Who Made You Feel This Way?-->
+        <scene sceneID="03R-3g-ukR">
+            <objects>
+                <viewController title="Who Made You Feel This Way?" id="Jrw-lj-wlr" customClass="WhoMadeYouFeelThisWayViewController" customModule="Let_it_Out" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nVI-f2-rT6"/>
+                        <viewControllerLayoutGuide type="bottom" id="IlX-aP-HvV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="65R-qb-jPs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Manny" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dqe-0F-zVR">
+                                <rect key="frame" x="126" y="140" width="454" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What did they do:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrD-Nc-Oop">
+                                <rect key="frame" x="38" y="196" width="80" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Complimented Me" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-Oo-lfT">
+                                <rect key="frame" x="126" y="215" width="454" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&quot;Greg, you're just the kind of person that other people really want to be around.&quot;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wuh-K7-7cF">
+                                <rect key="frame" x="20" y="324" width="560" height="211"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dW-JF-oSg">
+                                <rect key="frame" x="58" y="144" width="41" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="udo-ci-Zjk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSu-Fe-7u6">
+                                <rect key="frame" x="276" y="550" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="Jrw-lj-wlr" eventType="touchUpInside" id="F1E-wO-xkx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explain Further" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNZ-K0-rXg">
+                                <rect key="frame" x="242" y="282" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="165-VH-O8K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gEf-Oo-lfT" firstAttribute="top" secondItem="dqe-0F-zVR" secondAttribute="bottom" constant="45" id="0H0-Lk-Dyn"/>
+                            <constraint firstItem="dqe-0F-zVR" firstAttribute="leading" secondItem="1dW-JF-oSg" secondAttribute="trailing" constant="27" id="4le-u4-v5b"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wuh-K7-7cF" secondAttribute="leading" id="7Lb-qS-YIb"/>
+                            <constraint firstItem="wuh-K7-7cF" firstAttribute="top" secondItem="qNZ-K0-rXg" secondAttribute="bottom" constant="21" id="8m9-e8-VOw"/>
+                            <constraint firstItem="YrD-Nc-Oop" firstAttribute="leading" secondItem="65R-qb-jPs" secondAttribute="leadingMargin" constant="18" id="Afj-F7-UuL"/>
+                            <constraint firstItem="qNZ-K0-rXg" firstAttribute="top" secondItem="gEf-Oo-lfT" secondAttribute="bottom" constant="37" id="F97-Iz-zX0"/>
+                            <constraint firstItem="1dW-JF-oSg" firstAttribute="top" secondItem="nVI-f2-rT6" secondAttribute="bottom" constant="80" id="KZD-rz-CUs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dqe-0F-zVR" secondAttribute="trailing" id="NSQ-m0-omZ"/>
+                            <constraint firstItem="gEf-Oo-lfT" firstAttribute="leading" secondItem="YrD-Nc-Oop" secondAttribute="trailing" constant="8" symbolic="YES" id="Ndu-oK-60Y"/>
+                            <constraint firstItem="IlX-aP-HvV" firstAttribute="top" secondItem="FSu-Fe-7u6" secondAttribute="bottom" constant="20" id="PNL-s7-PGq"/>
+                            <constraint firstItem="YrD-Nc-Oop" firstAttribute="top" secondItem="1dW-JF-oSg" secondAttribute="bottom" constant="31" id="Pg5-zB-xiD"/>
+                            <constraint firstItem="1dW-JF-oSg" firstAttribute="centerY" secondItem="dqe-0F-zVR" secondAttribute="centerY" id="SkX-X5-Ng1"/>
+                            <constraint firstItem="dqe-0F-zVR" firstAttribute="top" secondItem="nVI-f2-rT6" secondAttribute="bottom" constant="76" id="Stm-mn-GU6"/>
+                            <constraint firstItem="IlX-aP-HvV" firstAttribute="top" secondItem="wuh-K7-7cF" secondAttribute="bottom" constant="65" id="euG-1T-htC"/>
+                            <constraint firstItem="YrD-Nc-Oop" firstAttribute="centerX" secondItem="1dW-JF-oSg" secondAttribute="centerX" id="fQe-EF-KTR"/>
+                            <constraint firstItem="gEf-Oo-lfT" firstAttribute="centerX" secondItem="dqe-0F-zVR" secondAttribute="centerX" id="fjw-fZ-vmk"/>
+                            <constraint firstItem="FSu-Fe-7u6" firstAttribute="centerX" secondItem="65R-qb-jPs" secondAttribute="centerX" id="gBU-gH-omV"/>
+                            <constraint firstItem="gEf-Oo-lfT" firstAttribute="trailing" secondItem="dqe-0F-zVR" secondAttribute="trailing" id="tXr-gX-NDG"/>
+                            <constraint firstItem="wuh-K7-7cF" firstAttribute="centerX" secondItem="65R-qb-jPs" secondAttribute="centerX" id="tc3-tD-rNE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wuh-K7-7cF" secondAttribute="trailing" id="vTI-jN-zk7"/>
+                            <constraint firstItem="gEf-Oo-lfT" firstAttribute="leading" secondItem="dqe-0F-zVR" secondAttribute="leading" id="vcu-GV-v0r"/>
+                            <constraint firstItem="wuh-K7-7cF" firstAttribute="top" secondItem="YrD-Nc-Oop" secondAttribute="bottom" constant="61" id="wHT-cJ-alb"/>
+                            <constraint firstItem="YrD-Nc-Oop" firstAttribute="centerY" secondItem="gEf-Oo-lfT" secondAttribute="centerY" id="yXG-ml-o3H"/>
+                            <constraint firstItem="qNZ-K0-rXg" firstAttribute="centerX" secondItem="65R-qb-jPs" secondAttribute="centerX" id="zaF-JX-pLL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="dqe-0F-zVR" id="y4Z-EP-IiA"/>
+                        <outlet property="textInput" destination="wuh-K7-7cF" id="RDc-fr-kev"/>
+                        <outlet property="whatDidTheyDoTextField" destination="gEf-Oo-lfT" id="yWt-Ph-2QS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOD-C6-aZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="3418"/>
         </scene>
         <!--Event Details-->
         <scene sceneID="7Zq-oE-bSf">

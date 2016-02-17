@@ -28,12 +28,17 @@ class Event : CustomStringConvertible {
     }
     
     var description : String {
+        if let emotion = emotion {
         return "Mood: \(mood)\n" +
                "Emotion: \(emotion)\n" +
                "Reason: \(reason)\n" +
                "Detail: \(detail)"
+        } else {
+            return "Mood: \(mood)\n" +
+                "Reason: \(reason)\n" +
+                "Detail: \(detail)"
+        }
     }
-
     
     init(snapshot: FDataSnapshot) {
         uid = snapshot.key
