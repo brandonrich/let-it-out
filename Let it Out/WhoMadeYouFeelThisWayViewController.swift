@@ -18,4 +18,19 @@ class WhoMadeYouFeelThisWayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func submit(sender: AnyObject) {
+        event?.detail = self.nameTextField.text! + " : " + self.whatDidTheyDoTextField.text! + " : " + textInput.text
+        User.currentUser.addEvent(event!)
+        goBackToStart()
+    }
+    
+    func goBackToStart() {
+        let allViewControllers = self.navigationController?.viewControllers
+        for aViewController in allViewControllers! {
+            if aViewController.isKindOfClass(HowAreYouFeelingViewController) {
+                self.navigationController?.popToViewController(aViewController, animated:true)
+            }
+        }
+    }
 }

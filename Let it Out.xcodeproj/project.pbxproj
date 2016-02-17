@@ -137,8 +137,8 @@
 				72D68B2E1C62F7E9003AAA5D /* LoginViewController.swift */,
 				72D4D76F1C5F043900FD9BAF /* FeelingDetailViewController.swift */,
 				72D4D76D1C5F008900FD9BAF /* HowAreYouFeelingViewController.swift */,
-				F113CC2F1C74C15100B03877 /* WhoMadeYouFeelThisWayViewController.swift */,
 				721AD5821C643AB4003768B7 /* WhyDoYouFeelThisWayViewController.swift */,
+				F113CC2F1C74C15100B03877 /* WhoMadeYouFeelThisWayViewController.swift */,
 				721AD5E01C697DDC003768B7 /* WhatHappenedViewController.swift */,
 				721AD5DD1C697DDC003768B7 /* EventDetailsViewController.swift */,
 			);

@@ -37,11 +37,18 @@ class WhyDoYouFeelThisWayViewController: UIViewController, UITableViewDataSource
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let whatHappenedVC = segue.destinationViewController as? WhatHappenedViewController,
-            cell = sender as? UITableViewCell,
-            indexPath = self.tableView.indexPathForCell(cell) {
+        if segue.identifier == "WhyToWhatSegue",
+            let whatHappenedVC = segue.destinationViewController as? WhatHappenedViewController,
+            indexPath = self.tableView.indexPathForSelectedRow {
                 event?.reason = reasons[indexPath.row]
                 whatHappenedVC.event = event
+        } else if segue.identifier == "WhyToWhoSegue",
+            let whoDidThisVC = segue.destinationViewController as? WhoMadeYouFeelThisWayViewController,
+            indexPath = self.tableView.indexPathForSelectedRow {
+                event?.reason = reasons[indexPath.row]
+                whoDidThisVC.event = event
+        } else {
+            print("Cannot tell what segue you are taking")
         }
     }
     
