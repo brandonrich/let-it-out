@@ -44,15 +44,17 @@ class WhyDoYouFeelThisWayViewController: UIViewController, UITableViewDataSource
                 whatHappenedVC.event = event
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "WhyToWhatSegue",
+            let indexPath = self.tableView.indexPathForSelectedRow {
+                let anothersWordsCellClicked = (indexPath.row == 1)
+                if(anothersWordsCellClicked) {
+                    self.performSegueWithIdentifier("WhyToWhoSegue", sender: nil)
+                    return false
+                }
+        }
+        return true
     }
-    */
 
 }

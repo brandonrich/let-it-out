@@ -478,7 +478,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="jEG-Pm-gf7" kind="show" id="UEN-dQ-Ve4"/>
+                                            <segue destination="jEG-Pm-gf7" kind="show" identifier="WhyToWhatSegue" id="UEN-dQ-Ve4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -513,6 +513,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="l1Y-eG-Q3V" id="6NU-IU-rkf"/>
+                        <segue destination="Jrw-lj-wlr" kind="show" identifier="WhyToWhoSegue" id="PeD-QE-Zft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xel-Q2-9oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -574,6 +575,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFn-nJ-n2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3671" y="2710"/>
+        </scene>
+        <!--Who Made You Feel This Way?-->
+        <scene sceneID="03R-3g-ukR">
+            <objects>
+                <viewController title="Who Made You Feel This Way?" id="Jrw-lj-wlr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nVI-f2-rT6"/>
+                        <viewControllerLayoutGuide type="bottom" id="IlX-aP-HvV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="65R-qb-jPs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOD-C6-aZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="3418"/>
         </scene>
         <!--Event Details-->
         <scene sceneID="7Zq-oE-bSf">
